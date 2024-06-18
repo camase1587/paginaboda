@@ -1,0 +1,28 @@
+<div class="modal" [ngClass]="{'is-active': isActive}">
+  <div class="modal-background" (click)="closeModal()"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Confirmar Asistencia</p>
+      <button class="delete" aria-label="close" (click)="closeModal()"></button>
+    </header>
+    <section class="modal-card-body">
+      <form (ngSubmit)="onSubmit()" #confirmForm="ngForm">
+        <div class="field">
+          <label class="label" for="nombre">Nombre</label>
+          <div class="control">
+            <input class="input" type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="personas">Número de personas</label>
+          <div class="control">
+            <input class="input" type="number" id="personas" name="personas" [(ngModel)]="personas" required min="1">
+          </div>
+        </div>
+        <div class="control">
+          <button class="button is-primary" type="submit">Confirmar</button>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>

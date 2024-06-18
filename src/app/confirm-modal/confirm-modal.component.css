@@ -1,0 +1,8 @@
+.modal.is-active {
+  display: flex;
+}
+
+.modal-card {
+  width: 80%;
+  max-width: 500px;
+}
